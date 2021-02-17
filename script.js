@@ -5,7 +5,7 @@ const calculateButton = document.getElementById('calculate')
 const resultDisp = document.getElementById('result')
 
 function error () {
-  alert("You have entered an invalid value. Make sure to only enter numbers into the fields and that no numbers are negative or zero.")
+  alert('You have entered an invalid value. Make sure to only enter numbers into the fields and that no numbers are negative or zero.')
 }
 
 function calculate (b1, b2, h) {
