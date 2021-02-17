@@ -9,18 +9,18 @@ function error () {
 }
 
 function calculate (b1, b2, h) {
-  return (b1+b2)/2*h
+  return (b1 + b2) / 2 * h
 }
 
 function stepbystep (b1, b2, h, result) {
-  return 'A=0.5*(b1+b2)*h\nA=0.5*(' + b1 + '+' + b2 + ')*'+ h + '\nA=0.5*(' + (b1+b2) + ')*' + h + '\nA=' + ((b1+b2)/2) + '*' + h + '\nA=' + result
+  return 'A=0.5*(b1+b2)*h\nA=0.5*(' + b1 + '+' + b2 + ')*' + h + '\nA=0.5*(' + (b1 + b2) + ')*' + h + '\nA=' + ((b1 + b2) / 2) + '*' + h + '\nA=' + result
 }
 
 function onclick () {
-  var b1 = parseFloat(b1Input.value)
-  var b2 = parseFloat(b2Input.value)
-  var h = parseFloat(hInput.value)
-  if (typeof b1 != 'number' || typeof b2 != 'number' || typeof h != 'number') {
+  let b1 = parseFloat(b1Input.value)
+  let b2 = parseFloat(b2Input.value)
+  let h = parseFloat(hInput.value)
+  if (typeof b1 !== 'number' || typeof b2 !== 'number' || typeof h !== 'number') {
     error()
     return
   }
@@ -32,7 +32,7 @@ function onclick () {
     error()
     return
   }
-  var result = calculate(b1, b2, h)
+  let result = calculate(b1, b2, h)
   resultDisp.innerText = result + ' u^2\n'
   resultDisp.innerText += stepbystep(b1, b2, h, result)
 }
