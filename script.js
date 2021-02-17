@@ -17,9 +17,9 @@ function stepbystep (b1, b2, h, result) {
 }
 
 function onclick () {
-  let b1 = parseFloat(b1Input.value)
-  let b2 = parseFloat(b2Input.value)
-  let h = parseFloat(hInput.value)
+  const b1 = parseFloat(b1Input.value)
+  const b2 = parseFloat(b2Input.value)
+  const h = parseFloat(hInput.value)
   if (typeof b1 !== 'number' || typeof b2 !== 'number' || typeof h !== 'number') {
     error()
     return
@@ -32,7 +32,7 @@ function onclick () {
     error()
     return
   }
-  let result = calculate(b1, b2, h)
+  const result = calculate(b1, b2, h)
   resultDisp.innerText = result + ' u^2\n'
   resultDisp.innerText += stepbystep(b1, b2, h, result)
 }
